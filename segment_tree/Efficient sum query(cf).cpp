@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 const int N = 1e5;  // limit for array size
 int n;  // array size
 int t[2 * N];
@@ -23,7 +25,7 @@ int main() {
   scanf("%d", &n);
   for (int i = 0; i < n; ++i) scanf("%d", t + n + i);
   build();
-  modify(0, 1);
-  printf("%d\n", query(3, 11));
+ // modify(0, 1);
+  printf("%d\n", query(2, 6)); // query [a,b)  starts from index 0 to n-1
   return 0;
 }
