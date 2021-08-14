@@ -7,7 +7,7 @@ void build() {  // build the tree
 }
 
 void modify(int p, int value) {  // set value at position p
-  for (t[p += n] = value; p > 1; p >>= 1) t[p>>1] = t[p] + t[p^1];
+  for (t[p += n] = value; p /= 2; ) t[p] = t[p * 2] + t[p * 2 + 1];
 }
 
 int query(int l, int r) {  // sum on interval [l, r)
