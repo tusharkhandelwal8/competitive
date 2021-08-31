@@ -1,6 +1,6 @@
 int i = -1;
 while(int l = n; l>0; l/=2)
 {
-  if((i+l)<x) i+=l;
+  while((i+l)<x) i+=l;
 }
 i++;
