@@ -12,7 +12,7 @@ void modify(int p, int value) {  // set value at position p
   for (t[p += n] = value; p /= 2; ) t[p] = max(t[p * 2] , t[p * 2 + 1]);
 }
 
-int query(int l, int r) {  // sum on interval [l, r)
+int query(int l, int r) {  // max on interval [l, r)
   int res = INT_MIN;
   for (l += n, r += n; l < r; l >>= 1, r >>= 1) {
     if (l&1) res = max(res,t[l++]);
